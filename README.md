@@ -1,4 +1,7 @@
-### Hi there 👋
+### "[WIP]"
+_...The sign reads as you walk past, wondering what could be here in the coming days.
+
+### Hi there 👋 This is currently undergoing construction...
 
 <!--
 **AMElashal26/AMElashal26** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -13,4 +16,4 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
--->
+-->  
