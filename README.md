@@ -1,5 +1,5 @@
 ### "[WIP]"
-_...The sign reads as you walk past, wondering what could be here in the coming days.
+_...The sign reads as you walk past, wondering what could be here in the coming days._
 
 ### Hi there 👋 This is currently undergoing construction...
 
