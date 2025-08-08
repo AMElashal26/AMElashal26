@@ -27,7 +27,7 @@
 Curated selection coming soon. In the meantime, here are the most recently updated public projects:
 
 <!-- PROJECTS:START -->
-- [AMElashal26](https://github.com/AMElashal26/AMElashal26)
+- [AMElashal26](https://github.com/AMElashal26/AMElashal26): Python
 - [context-engineering](https://github.com/AMElashal26/context-engineering): Views into practical applications of context-engineering
 - [Javascript-Slot-Machine](https://github.com/AMElashal26/Javascript-Slot-Machine): JavaScript
 - [Portfolio](https://github.com/AMElashal26/Portfolio)
@@ -50,10 +50,10 @@ Public events from my GitHub timeline:
 Top languages across my recent repositories:
 
 <!-- LANGUAGES:START -->
-- Jupyter Notebook: 85.8%
+- Jupyter Notebook: 84.9%
 - JavaScript: 6.0%
+- Python: 3.7%
 - TypeScript: 3.1%
-- Python: 2.8%
 - CSS: 1.4%
 - HTML: 0.9%
 <!-- LANGUAGES:END -->
