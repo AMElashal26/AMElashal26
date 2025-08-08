@@ -21,11 +21,7 @@ jobs:
           GITHUB_USERNAME: AMElashal26
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python - << 'PY'
-import subprocess, sys
-subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--quiet', '--disable-pip-version-check'])
-print('No extra dependencies needed')
-PY
+          python -m pip install --quiet --disable-pip-version-check
           python scripts/update_readme.py
       - name: Commit changes
         run: |
