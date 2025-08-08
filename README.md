@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-  <img alt="AM Elashal banner" src="AMElashal26/assets/banner-light.svg">
+  <img alt="AM Elashal banner" src="assets/banner-light.svg">
 </picture>
 
 ## Hi, I’m AM Elashal
