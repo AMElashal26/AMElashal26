@@ -1,0 +1,12 @@
+<svg width="1200" height="240" viewBox="0 0 1200 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gd" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="240" fill="url(#gd)"/>
+  <text x="60" y="140" font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#e2e8f0">
+    AM Elashal — Python • Automation • Data • Context Engineering
+  </text>
+</svg>
