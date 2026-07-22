@@ -2,31 +2,97 @@ name: Update Profile README
 
 on:
   schedule:
-    - cron: "0 6 * * *"  # daily at 06:00 UTC
-  workflow_dispatch:
+    - cron: '0 6 * * *'  # Daily at 6 AM UTC
+  workflow_dispatch:  # Manual trigger
 
 permissions:
   contents: write
 
 jobs:
-  update:
+  update-readme:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch recent commits
+        uses: actions/github-script@v7
+        id: commits
         with:
-          python-version: "3.11"
-      - name: Run updater
-        env:
-          GITHUB_USERNAME: AMElashal26
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const query = `query {
+              user(login: "AMElashal26") {
+                repositories(first: 50, orderBy: {field: UPDATED_AT, direction: DESC}, ownerAffiliations: OWNER) {
+                  nodes {
+                    name
+                    url
+                    pushedAt
+                    defaultBranchRef {
+                      target {
+                        ... on Commit {
+                          history(first: 1) {
+                            nodes {
+                              message
+                              committedDate
+                              abbreviatedOid
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }`;
+            const result = await github.graphql(query);
+            const repos = result.user.repositories.nodes
+              .filter(r => r.name !== 'AMElashal26' && r.defaultBranchRef?.target?.history?.nodes?.length > 0)
+              .sort((a, b) => new Date(b.pushedAt) - new Date(a.pushedAt))
+              .slice(0, 5)
+              .map(r => ({
+                repo: r.name,
+                url: r.url,
+                commit: r.defaultBranchRef.target.history.nodes[0].message.split('\n')[0],
+                hash: r.defaultBranchRef.target.history.nodes[0].abbreviatedOid,
+                date: r.defaultBranchRef.target.history.nodes[0].committedDate
+              }));
+            return JSON.stringify(repos);
+
+      - name: Update README
         run: |
-          python -m pip install --quiet --disable-pip-version-check
-          python scripts/update_readme.py
+          COMMITS='${{ steps.commits.outputs.result }}'
+          python3 -c "
+          import json, re, datetime
+
+          commits = json.loads('''$COMMITS''')
+
+          with open('README.md', 'r') as f:
+              content = f.read()
+
+          # Build workbench table
+          rows = []
+          for c in commits[:3]:
+              date = datetime.datetime.fromisoformat(c['date'].replace('Z','+00:00')).strftime('%b %d')
+              rows.append(f'| {date} | [{c[\"commit\"][:60]}]({c[\"url\"]}) | {c[\"repo\"]} |')
+
+          table = '\n'.join(rows) if rows else '| - | No recent activity | - |'
+
+          # Replace auto-generated section
+          pattern = r'(<!--AUTO-GENERATED-->)(.*?)(<!--END-->)'
+          replacement = f'<!--AUTO-GENERATED-->\n\n### Latest from the workbench\n_Last updated: {datetime.datetime.now(datetime.timezone.utc).strftime(\"%Y-%m-%d %H:%M UTC\")}_\n\n| When | What | Where |\n|-----|------|-------|\n{table}\n\n<!--END-->'
+
+          content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+
+          with open('README.md', 'w') as f:
+              f.write(content)
+
+          print('README updated')
+          "
+
       - name: Commit changes
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "chore: update profile README" || echo "No changes"
+          git diff --staged --quiet || git commit -m "auto: update workbench section [skip ci]"
           git push
