@@ -61,39 +61,44 @@ jobs:
       - name: Update README
         run: |
           COMMITS='${{ steps.commits.outputs.result }}'
-          python3 -c "
-          import json, re, datetime
-          
-          try:
-              commits = json.loads('''$COMMITS''')
-          except json.JSONDecodeError:
-              commits_str = '''$COMMITS'''.strip()
-              if commits_str.startswith('['):
-                  end_idx = commits_str.find(']') + 1
-                  commits = json.loads(commits_str[:end_idx])
-              else:
-                  commits = []
-          
+          python3 << 'EOF'
+          import json
+          import re
+          import datetime
+
+          commits = json.loads("""$COMMITS""")
+
           with open('README.md', 'r') as f:
               content = f.read()
-          
+
+          # Build workbench table
           rows = []
           for c in commits[:3]:
               date = datetime.datetime.fromisoformat(c['date'].replace('Z','+00:00')).strftime('%b %d')
-              rows.append(f'| {date} | [{c[\"commit\"][:60]}]({c[\"url\"]}) | {c[\"repo\"]} |')
-          
+              rows.append(f"| {date} | [{c['commit'][:60]}]({c['url']}) | {c['repo']} |")
+
           table = '\n'.join(rows) if rows else '| - | No recent activity | - |'
-          
+
+          # Replace auto-generated section
           pattern = r'(<!--AUTO-GENERATED-->)(.*?)(<!--END-->)'
-          replacement = f'<!--AUTO-GENERATED-->\n\n### Latest from the workbench\n_Last updated: {datetime.datetime.now(datetime.timezone.utc).strftime(\"%Y-%m-%d %H:%M UTC\")}_\n\n| When | What | Repo |\n|------|------|------|\n{table}\n\n<!--END-->'
-          
+          replacement = f"""<!--AUTO-GENERATED-->
+
+          ### Latest from the workbench
+          _Last updated: {datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}_
+
+          | When | What | Repo |
+          |------|------|------|
+          {table}
+
+          <!--END-->"""
+
           content = re.sub(pattern, replacement, content, flags=re.DOTALL)
-          
+
           with open('README.md', 'w') as f:
               f.write(content)
-          
+
           print('README updated')
-          "
+          EOF
 
       - name: Commit changes
         run: |
