@@ -62,7 +62,7 @@ jobs:
         env:
           COMMITS: ${{ steps.commits.outputs.result }}
         run: |
-          python3 << 'EOF'
+          python3 << EOF
           import json
           import re
           import datetime
