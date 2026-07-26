@@ -59,14 +59,17 @@ jobs:
             return JSON.stringify(repos);
 
       - name: Update README
+        env:
+          COMMITS: ${{ steps.commits.outputs.result }}
         run: |
-          COMMITS='${{ steps.commits.outputs.result }}'
           python3 << 'EOF'
           import json
           import re
           import datetime
+          import os
 
-          commits = json.loads("""$COMMITS""")
+          commits_json = os.environ.get('COMMITS', '[]')
+          commits = json.loads(commits_json)
 
           with open('README.md', 'r') as f:
               content = f.read()
