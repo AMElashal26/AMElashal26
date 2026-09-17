@@ -11,6 +11,7 @@ from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
 
 README_PATH = pathlib.Path(__file__).resolve().parents[1] / "README.md"
+FEATURED_REPOS_PATH = pathlib.Path(__file__).resolve().with_name("featured_repos.json")
 GITHUB_USERNAME = os.environ.get("GITHUB_USERNAME", "AMElashal26")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")  # optional
 API_BASE = "https://api.github.com"
@@ -37,12 +38,50 @@ def github_get(url: str):
     return None
 
 
-def format_projects():
-    # Fetch user repos sorted by updated
+def fetch_public_repos():
     repos = github_get(f"{API_BASE}/users/{GITHUB_USERNAME}/repos?per_page=100&sort=updated") or []
-    public_repos = [r for r in repos if not r.get("fork")]
+    return [r for r in repos if not r.get("fork") and r.get("name") != GITHUB_USERNAME]
+
+
+def load_curated_repos():
+    if not FEATURED_REPOS_PATH.exists():
+        return []
+    try:
+        data = json.loads(FEATURED_REPOS_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+    if isinstance(data, dict):
+        repos = data.get("repos", [])
+    elif isinstance(data, list):
+        repos = data
+    else:
+        repos = []
+    return [str(repo).strip() for repo in repos if str(repo).strip()]
+
+
+def format_projects():
+    public_repos = fetch_public_repos()
+    curated = load_curated_repos()
+    by_name = {str(r.get("name", "")).lower(): r for r in public_repos}
+    selected = []
+    selected_names = set()
+
+    for name in curated:
+        repo = by_name.get(name.lower())
+        if repo and repo.get("name") not in selected_names:
+            selected.append(repo)
+            selected_names.add(repo.get("name"))
+
+    for repo in public_repos:
+        repo_name = repo.get("name")
+        if repo_name not in selected_names:
+            selected.append(repo)
+            selected_names.add(repo_name)
+        if len(selected) >= MAX_REPOS:
+            break
+
     lines = []
-    for repo in public_repos[:MAX_REPOS]:
+    for repo in selected[:MAX_REPOS]:
         name = repo.get("name", "")
         desc = (repo.get("description") or "").strip()
         stars = repo.get("stargazers_count", 0)
@@ -107,8 +146,7 @@ def format_activity():
 
 def format_languages():
     # Aggregate languages across top updated repos
-    repos = github_get(f"{API_BASE}/users/{GITHUB_USERNAME}/repos?per_page=100&sort=updated") or []
-    public_repos = [r for r in repos if not r.get("fork")]
+    public_repos = fetch_public_repos()
     totals = {}
     for repo in public_repos[:20]:
         langs_url = repo.get("languages_url")
