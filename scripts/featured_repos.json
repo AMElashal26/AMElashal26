@@ -1,0 +1,30 @@
+[
+  {
+    "repo": "context-engineering",
+    "domain": "LLM workflows",
+    "maturity": "active",
+    "impact": "high",
+    "highlight": "Practical patterns for reliable context engineering and evaluation."
+  },
+  {
+    "repo": "Safari_Tabs_Archiver",
+    "domain": "automation",
+    "maturity": "shipped",
+    "impact": "medium",
+    "highlight": "Utility-first project that solves a concrete workflow pain point."
+  },
+  {
+    "repo": "Javascript-Slot-Machine",
+    "domain": "frontend",
+    "maturity": "learning",
+    "impact": "medium",
+    "highlight": "Hands-on JavaScript project focused on interaction and logic."
+  },
+  {
+    "repo": "what-should-i-do",
+    "domain": "product experiment",
+    "maturity": "prototype",
+    "impact": "medium",
+    "highlight": "Small product experiment with TypeScript and rapid iteration."
+  }
+]
