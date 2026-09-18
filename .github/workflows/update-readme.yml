@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Update README
+      - name: Update README blocks
         env:
           GITHUB_USERNAME: AMElashal26
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -26,5 +26,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --staged --quiet || git commit -m "auto: update workbench section [skip ci]"
+          git diff --staged --quiet || git commit -m "auto: update profile README sections [skip ci]"
           git push
