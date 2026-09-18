@@ -27,35 +27,35 @@
 Curated selection coming soon. In the meantime, here are the most recently updated public projects:
 
 <!-- PROJECTS:START -->
-- [AMElashal26](https://github.com/AMElashal26/AMElashal26): Python
 - [context-engineering](https://github.com/AMElashal26/context-engineering): Views into practical applications of context-engineering
+- [Safari_Tabs_Archiver](https://github.com/AMElashal26/Safari_Tabs_Archiver): Exports and cleans tabs and tab groups in safari to hopefully let it run smoother · ⭐ 2
+- [what-should-i-do](https://github.com/AMElashal26/what-should-i-do): TypeScript
 - [Javascript-Slot-Machine](https://github.com/AMElashal26/Javascript-Slot-Machine): JavaScript
 - [Portfolio](https://github.com/AMElashal26/Portfolio)
-- [Safari_Tabs_Archiver](https://github.com/AMElashal26/Safari_Tabs_Archiver): Exports and cleans tabs and tab groups in safari to hopefully let it run smoother · ⭐ 1
-- [what-should-i-do](https://github.com/AMElashal26/what-should-i-do): TypeScript
+- [learning-github-actions](https://github.com/AMElashal26/learning-github-actions)
 <!-- PROJECTS:END -->
 
 ### Recent activity
 Public events from my GitHub timeline:
 
 <!-- ACTIVITY:START -->
-- 2025-07-11: pushed 1 commit(s) to AMElashal26/Javascript-Slot-Machine
-- 2025-07-11: pushed 1 commit(s) to AMElashal26/Javascript-Slot-Machine
-- 2025-07-11: pushed 1 commit(s) to AMElashal26/Javascript-Slot-Machine
-- 2025-07-11: pushed 1 commit(s) to AMElashal26/Javascript-Slot-Machine
-- 2025-07-11: created branch main in AMElashal26/Javascript-Slot-Machine
+- 2026-09-18: IssueCommentEvent in AMElashal26/AMElashal26
+- 2026-09-17: WatchEvent in ayghri/i-have-adhd
+- 2026-09-17: WatchEvent in obra/superpowers
+- 2026-09-17: WatchEvent in blader/humanizer
+- 2026-09-17: WatchEvent in petergyang/no-ai-slop
 <!-- ACTIVITY:END -->
 
 ### Language mix (approximate)
 Top languages across my recent repositories:
 
 <!-- LANGUAGES:START -->
-- Jupyter Notebook: 84.9%
-- JavaScript: 6.0%
-- Python: 3.7%
-- TypeScript: 3.1%
-- CSS: 1.4%
-- HTML: 0.9%
+- Python: 43.7%
+- Shell: 24.6%
+- Jupyter Notebook: 17.6%
+- TypeScript: 11.9%
+- HTML: 0.8%
+- Dockerfile: 0.7%
 <!-- LANGUAGES:END -->
 
 ### Now / Focus
@@ -69,5 +69,5 @@ Top languages across my recent repositories:
 —
 
 Last updated: <!-- UPDATED:START -->
-2025-08-08
+2026-09-18
 <!-- UPDATED:END -->
