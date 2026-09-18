@@ -39,8 +39,12 @@ def github_get(url: str):
 
 def fetch_public_repos():
     repos = github_get(f"{API_BASE}/users/{GITHUB_USERNAME}/repos?per_page=100&sort=updated") or []
-    public_repos = [r for r in repos if not r.get("fork")]
-    return sorted(public_repos, key=lambda r: r.get("pushed_at") or "", reverse=True)
+    public_repos = [
+        repo
+        for repo in repos
+        if not repo.get("fork") and repo.get("name") != GITHUB_USERNAME
+    ]
+    return sorted(public_repos, key=lambda repo: repo.get("pushed_at") or "", reverse=True)
 
 
 def load_featured_config():
@@ -48,15 +52,28 @@ def load_featured_config():
         return []
     try:
         data = json.loads(FEATURED_REPOS_PATH.read_text(encoding="utf-8"))
-        if isinstance(data, list):
-            return [item for item in data if isinstance(item, dict) and item.get("repo")]
     except Exception as e:
         print(f"Failed to parse {FEATURED_REPOS_PATH}: {e}", file=sys.stderr)
+        return []
+
+    if isinstance(data, dict):
+        repos = data.get("repos", [])
+        return [{"repo": str(name).strip()} for name in repos if str(name).strip()]
+
+    if isinstance(data, list):
+        featured = []
+        for item in data:
+            if isinstance(item, dict) and item.get("repo"):
+                featured.append(item)
+            elif isinstance(item, str) and item.strip():
+                featured.append({"repo": item.strip()})
+        return featured
+
     return []
 
 
 def format_projects(public_repos):
-    repo_by_name = {r.get("name", "").lower(): r for r in public_repos if r.get("name")}
+    repo_by_name = {repo.get("name", "").lower(): repo for repo in public_repos if repo.get("name")}
     featured = load_featured_config()
     lines = []
     seen = set()

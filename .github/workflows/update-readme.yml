@@ -17,8 +17,8 @@ jobs:
 
       - name: Update README blocks
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: AMElashal26
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/update_readme.py
 
       - name: Commit changes

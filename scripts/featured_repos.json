@@ -14,6 +14,13 @@
     "highlight": "Utility-first project that solves a concrete workflow pain point."
   },
   {
+    "repo": "what-should-i-do",
+    "domain": "product experiment",
+    "maturity": "prototype",
+    "impact": "medium",
+    "highlight": "Small product experiment with TypeScript and rapid iteration."
+  },
+  {
     "repo": "Javascript-Slot-Machine",
     "domain": "frontend",
     "maturity": "learning",
@@ -21,10 +28,10 @@
     "highlight": "Hands-on JavaScript project focused on interaction and logic."
   },
   {
-    "repo": "what-should-i-do",
-    "domain": "product experiment",
-    "maturity": "prototype",
+    "repo": "Portfolio",
+    "domain": "portfolio",
+    "maturity": "active",
     "impact": "medium",
-    "highlight": "Small product experiment with TypeScript and rapid iteration."
+    "highlight": "Portfolio project showcasing selected work and presentation direction."
   }
 ]
