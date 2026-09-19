@@ -36,13 +36,22 @@ Priority projects are manually curated and then auto-filled with recent repos fo
 ### Recent public activity
 
 <!-- ACTIVITY:START -->
-- (No recent public activity)
+- 2026-09-18: IssueCommentEvent in AMElashal26/AMElashal26
+- 2026-09-17: WatchEvent in ayghri/i-have-adhd
+- 2026-09-17: WatchEvent in obra/superpowers
+- 2026-09-17: WatchEvent in blader/humanizer
+- 2026-09-17: WatchEvent in petergyang/no-ai-slop
 <!-- ACTIVITY:END -->
 
 ### Language mix (approximate)
 
 <!-- LANGUAGES:START -->
-- (No language data)
+- Python: 43.7%
+- Shell: 24.6%
+- Jupyter Notebook: 17.6%
+- TypeScript: 11.9%
+- HTML: 0.8%
+- Dockerfile: 0.7%
 <!-- LANGUAGES:END -->
 
 ### Work with me
