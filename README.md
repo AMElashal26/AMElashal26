@@ -22,27 +22,42 @@ Priority projects are manually curated and then auto-filled with recent repos fo
 
 <!-- PROJECTS:START -->
 - [context-engineering](https://github.com/AMElashal26/context-engineering): Practical patterns for reliable context engineering and evaluation. · domain: LLM workflows · maturity: active · impact: high
-- [Safari_Tabs_Archiver](https://github.com/AMElashal26/Safari_Tabs_Archiver): Utility-first project that solves a concrete workflow pain point. · domain: automation · maturity: shipped · impact: medium
-- [Javascript-Slot-Machine](https://github.com/AMElashal26/Javascript-Slot-Machine): Hands-on JavaScript project focused on interaction and logic. · domain: frontend · maturity: learning · impact: medium
+- [Safari_Tabs_Archiver](https://github.com/AMElashal26/Safari_Tabs_Archiver): Utility-first project that solves a concrete workflow pain point. · domain: automation · maturity: shipped · impact: medium · ⭐ 2
 - [what-should-i-do](https://github.com/AMElashal26/what-should-i-do): Small product experiment with TypeScript and rapid iteration. · domain: product experiment · maturity: prototype · impact: medium
+- [Javascript-Slot-Machine](https://github.com/AMElashal26/Javascript-Slot-Machine): Hands-on JavaScript project focused on interaction and logic. · domain: frontend · maturity: learning · impact: medium
+- [Portfolio](https://github.com/AMElashal26/Portfolio): Portfolio project showcasing selected work and presentation direction. · domain: portfolio · maturity: active · impact: medium
+- [learning-github-actions](https://github.com/AMElashal26/learning-github-actions)
 <!-- PROJECTS:END -->
 
 ### Recently updated repositories
 
 <!-- RECENT_REPOS:START -->
-- (No recently updated repositories)
+- 2026-06-23: [learning-github-actions](https://github.com/AMElashal26/learning-github-actions) (n/a)
+- 2026-05-22: [reddit_scraper-context](https://github.com/AMElashal26/reddit_scraper-context) (n/a)
+- 2026-05-17: [interactive](https://github.com/AMElashal26/interactive) (Shell)
+- 2026-04-26: [Screenshots-Cleaner-PythApplescript](https://github.com/AMElashal26/Screenshots-Cleaner-PythApplescript) (Python)
+- 2026-04-25: [screenshot-intel](https://github.com/AMElashal26/screenshot-intel) (Python)
 <!-- RECENT_REPOS:END -->
 
 ### Recent public activity
 
 <!-- ACTIVITY:START -->
-- (No recent public activity)
+- 2026-09-19: IssueCommentEvent in AMElashal26/AMElashal26
+- 2026-09-19: PullRequestReviewEvent in AMElashal26/AMElashal26
+- 2026-09-17: pushed 0 commit(s) to AMElashal26/AMElashal26
+- 2026-09-18: IssueCommentEvent in AMElashal26/AMElashal26
+- 2026-09-17: WatchEvent in ayghri/i-have-adhd
 <!-- ACTIVITY:END -->
 
 ### Language mix (approximate)
 
 <!-- LANGUAGES:START -->
-- (No language data)
+- Python: 44.6%
+- Shell: 24.4%
+- Jupyter Notebook: 17.1%
+- TypeScript: 11.6%
+- HTML: 0.8%
+- Dockerfile: 0.7%
 <!-- LANGUAGES:END -->
 
 ### Work with me
@@ -61,5 +76,5 @@ Priority projects are manually curated and then auto-filled with recent repos fo
 - [Template D](/docs/landing-page/templates/template-d.md)
 
 Last updated: <!-- UPDATED:START -->
-2026-09-18
+2026-09-19
 <!-- UPDATED:END -->
