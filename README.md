@@ -52,10 +52,10 @@ Priority projects are manually curated and then auto-filled with recent repos fo
 ### Language mix (approximate)
 
 <!-- LANGUAGES:START -->
-- Python: 44.6%
-- Shell: 24.4%
-- Jupyter Notebook: 17.1%
-- TypeScript: 11.6%
+- Python: 43.7%
+- Shell: 24.6%
+- Jupyter Notebook: 17.6%
+- TypeScript: 11.9%
 - HTML: 0.8%
 - Dockerfile: 0.7%
 <!-- LANGUAGES:END -->
