@@ -76,5 +76,5 @@ Priority projects are manually curated and then auto-filled with recent repos fo
 - [Template D](/docs/landing-page/templates/template-d.md)
 
 Last updated: <!-- UPDATED:START -->
-2026-09-24
+2026-09-25
 <!-- UPDATED:END -->
