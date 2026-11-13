@@ -42,11 +42,11 @@ Priority projects are manually curated and then auto-filled with recent repos fo
 ### Recent public activity
 
 <!-- ACTIVITY:START -->
-- 2026-10-20: PublicEvent in AMElashal26/safari-reading-list
-- 2026-10-20: PublicEvent in AMElashal26/tab-forensics
-- 2026-10-19: forked microsoft/api-guidelines
-- 2026-10-19: WatchEvent in microsoft/api-guidelines
-- 2026-10-19: WatchEvent in lxcadoza993/workshop-kit
+- 2026-11-13: WatchEvent in AchoArnold/discount-for-student-dev
+- 2026-11-13: WatchEvent in vercel-labs/agent-desktop
+- 2026-11-13: WatchEvent in cloudflare/security-audit-skill
+- 2026-11-13: WatchEvent in thedotmack/claude-mem
+- 2026-11-13: WatchEvent in dreamingechoes/awesome-mental-health
 <!-- ACTIVITY:END -->
 
 ### Language mix (approximate)
@@ -76,5 +76,5 @@ Priority projects are manually curated and then auto-filled with recent repos fo
 - [Template D](/docs/landing-page/templates/template-d.md)
 
 Last updated: <!-- UPDATED:START -->
-2026-11-12
+2026-11-13
 <!-- UPDATED:END -->
