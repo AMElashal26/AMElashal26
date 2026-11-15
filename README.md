@@ -26,38 +26,38 @@ Priority projects are manually curated and then auto-filled with recent repos fo
 - [what-should-i-do](https://github.com/AMElashal26/what-should-i-do): Small product experiment with TypeScript and rapid iteration. · domain: product experiment · maturity: prototype · impact: medium
 - [Javascript-Slot-Machine](https://github.com/AMElashal26/Javascript-Slot-Machine): Hands-on JavaScript project focused on interaction and logic. · domain: frontend · maturity: learning · impact: medium
 - [Portfolio](https://github.com/AMElashal26/Portfolio): Portfolio project showcasing selected work and presentation direction. · domain: portfolio · maturity: active · impact: medium
-- [tab-forensics](https://github.com/AMElashal26/tab-forensics): Audit, archive and safely de-bloat runaway Chrome tab sessions. Diagnosed a 1,666-tab session that exhausted system swap: the binding constraint was process count, not tab weight. · Python
+- [zshrc-utlity-functions](https://github.com/AMElashal26/zshrc-utlity-functions): Helpful, cool, interesting utility functions, aliases, ideas, etc for the zshrc functionality
 <!-- PROJECTS:END -->
 
 ### Recently updated repositories
 
 <!-- RECENT_REPOS:START -->
+- 2026-11-15: [zshrc-utlity-functions](https://github.com/AMElashal26/zshrc-utlity-functions) (n/a)
 - 2026-10-20: [tab-forensics](https://github.com/AMElashal26/tab-forensics) (Python)
 - 2026-10-20: [safari-reading-list](https://github.com/AMElashal26/safari-reading-list) (Python)
 - 2026-06-23: [learning-github-actions](https://github.com/AMElashal26/learning-github-actions) (n/a)
 - 2026-05-22: [reddit_scraper-context](https://github.com/AMElashal26/reddit_scraper-context) (n/a)
-- 2026-05-17: [interactive](https://github.com/AMElashal26/interactive) (Shell)
 <!-- RECENT_REPOS:END -->
 
 ### Recent public activity
 
 <!-- ACTIVITY:START -->
-- 2026-11-13: WatchEvent in AchoArnold/discount-for-student-dev
-- 2026-11-13: WatchEvent in vercel-labs/agent-desktop
-- 2026-11-13: WatchEvent in cloudflare/security-audit-skill
-- 2026-11-13: WatchEvent in thedotmack/claude-mem
-- 2026-11-13: WatchEvent in dreamingechoes/awesome-mental-health
+- 2026-11-15: WatchEvent in Noniv/abyssal-garden
+- 2026-11-15: WatchEvent in muaaz9329/cheap-ag
+- 2026-11-15: WatchEvent in linuztx/alter-zero
+- 2026-11-15: WatchEvent in marlonrichert/zsh-launchpad
+- 2026-11-15: WatchEvent in unixorn/awesome-zsh-plugins
 <!-- ACTIVITY:END -->
 
 ### Language mix (approximate)
 
 <!-- LANGUAGES:START -->
-- Python: 61.4%
-- Shell: 15.8%
-- Jupyter Notebook: 11.3%
-- TypeScript: 7.6%
-- HTML: 2.3%
+- Python: 69.3%
+- Shell: 17.8%
+- TypeScript: 8.6%
+- HTML: 2.6%
 - Makefile: 0.6%
+- Dockerfile: 0.5%
 <!-- LANGUAGES:END -->
 
 ### Work with me
@@ -76,5 +76,5 @@ Priority projects are manually curated and then auto-filled with recent repos fo
 - [Template D](/docs/landing-page/templates/template-d.md)
 
 Last updated: <!-- UPDATED:START -->
-2026-11-14
+2026-11-15
 <!-- UPDATED:END -->
