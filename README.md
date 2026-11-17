@@ -42,11 +42,11 @@ Priority projects are manually curated and then auto-filled with recent repos fo
 ### Recent public activity
 
 <!-- ACTIVITY:START -->
+- 2026-11-17: WatchEvent in tmux/tmux
+- 2026-11-17: WatchEvent in alichtman/shallow-backup
 - 2026-11-15: pushed 0 commit(s) to AMElashal26/zshrc-utlity-functions
 - 2026-11-15: WatchEvent in coreyhaines31/marketingskills
 - 2026-11-15: WatchEvent in marlonrichert/zsh-snap
-- 2026-11-15: WatchEvent in Noniv/abyssal-garden
-- 2026-11-15: WatchEvent in muaaz9329/cheap-ag
 <!-- ACTIVITY:END -->
 
 ### Language mix (approximate)
@@ -76,5 +76,5 @@ Priority projects are manually curated and then auto-filled with recent repos fo
 - [Template D](/docs/landing-page/templates/template-d.md)
 
 Last updated: <!-- UPDATED:START -->
-2026-11-16
+2026-11-17
 <!-- UPDATED:END -->
